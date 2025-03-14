@@ -1,1 +1,726 @@
-<h1>Hello This is Sat-Sam2</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Academic Research Project Website Template">
+  <meta name="keywords" content="Research, Academic, Project, Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Project Website Template</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    :root {
+      --primary: #3273dc;
+      --primary-dark: #2160c4;
+      --accent: #ff3860;
+      --light-bg: #f5f7fa;
+      --dark-text: #363636;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-text);
+      scroll-behavior: smooth;
+    }
+    
+    .title, .subtitle {
+      font-family: 'Roboto Slab', serif;
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    }
+    
+    .hero.is-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+    
+    .publication-title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .publication-authors {
+      margin-bottom: 1.5rem;
+    }
+    
+    .author-block {
+      margin-right: 0.5rem;
+    }
+    
+    .author-block a {
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+    
+    .author-block a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+    
+    .publication-links {
+      margin-top: 2rem;
+    }
+    
+    .external-link {
+      margin-right: 0.5rem;
+      transition: transform 0.2s;
+    }
+    
+    .external-link:hover {
+      transform: translateY(-2px);
+    }
+    
+    .teaser {
+      background-color: var(--light-bg);
+      padding: 3rem 0;
+    }
+    
+    .teaser video, .teaser img {
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: auto;
+    }
+    
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: var(--primary);
+    }
+    
+    .content img {
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+    
+    .content img:hover {
+      transform: scale(1.02);
+    }
+    
+    .card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .footer {
+      padding: 3rem 1.5rem 3rem;
+      background-color: var(--light-bg);
+    }
+    
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .publication-title {
+        font-size: 2rem !important;
+      }
+      
+      .section {
+        padding: 3rem 1rem;
+      }
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    /* Code block styling */
+    pre {
+      background-color: #f5f7fa;
+      border-radius: 6px;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    
+    /* Image caption styling */
+    .image-caption {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+    
+    /* Key insights styling */
+    .key-insight {
+      background-color: #f0f7ff;
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0 6px 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar is-white is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <strong>PROJECT NAME</strong>
+      </a>
+      
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#abstract">
+          Abstract
+        </a>
+        <a class="navbar-item" href="#method">
+          Method
+        </a>
+        <a class="navbar-item" href="#results">
+          Results
+        </a>
+        <a class="navbar-item" href="#bibtex">
+          BibTeX
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="#">
+              Related Project 1
+            </a>
+            <a class="navbar-item" href="#">
+              Related Project 2
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="#">
+              Research Group
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section class="hero is-primary is-medium">
+  <div class="hero-body">
+    <div class="container has-text-centered animate-fade-in">
+      <h1 class="title is-1 has-text-white publication-title">
+        Your Research Project Title
+      </h1>
+      <div class="publication-authors has-text-white">
+        <span class="author-block">
+          <a href="#" class="has-text-white">First Author</a><sup>1</sup>,
+        </span>
+        <span class="author-block">
+          <a href="#" class="has-text-white">Second Author</a><sup>2</sup>,
+        </span>
+        <span class="author-block">
+          <a href="#" class="has-text-white">Third Author</a><sup>1</sup>,
+        </span>
+        <span class="author-block">
+          <a href="#" class="has-text-white">Fourth Author</a><sup>3*</sup>
+        </span>
+      </div>
+      
+      <div class="is-size-5 has-text-white mb-4">
+        <span class="author-block"><sup>1</sup>University One,</span>
+        <span class="author-block"><sup>2</sup>Research Lab,</span>
+        <span class="author-block"><sup>3</sup>University Two</span>
+        <br>
+        <span class="author-block"><sup>*</sup>Corresponding author</span>
+      </div>
+      
+      <div class="publication-links">
+        <a href="#" target="_blank" class="button is-rounded is-white is-outlined external-link">
+          <span class="icon">
+            <i class="ai ai-arxiv"></i>
+          </span>
+          <span>Paper</span>
+        </a>
+        <a href="#" target="_blank" class="button is-rounded is-white is-outlined external-link">
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>Code</span>
+        </a>
+        <a href="#" target="_blank" class="button is-rounded is-white is-outlined external-link">
+          <span class="icon">
+            <i class="fas fa-database"></i>
+          </span>
+          <span>Dataset</span>
+        </a>
+        <a href="#" target="_blank" class="button is-rounded is-white is-outlined external-link">
+          <span class="icon">
+            <i class="fas fa-video"></i>
+          </span>
+          <span>Video</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser -->
+<section class="section teaser">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <div class="has-text-centered">
+          <video id="teaser" autoplay muted loop playsinline width="100%">
+            <source src="/api/placeholder/800/450" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered mt-4">
+            A brief demonstration of our research method and its key capabilities.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section" id="abstract">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">Abstract</h2>
+        <div class="content has-text-justified">
+          <p class="is-size-5">
+            This research presents a novel approach to [research problem], addressing the key challenges of [challenge 1], [challenge 2], and [challenge 3]. Our method utilizes [technical approach] to achieve [primary benefit]. Through comprehensive experiments on [datasets/benchmarks], we demonstrate that our approach outperforms existing methods by [improvement metrics]. The key contributions include [contribution 1], [contribution 2], and [contribution 3]. Our findings have significant implications for [application domains] and open up new possibilities for [future directions].
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Method -->
+<section class="section" id="method">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">Method</h2>
+        
+        <!-- Key Insights -->
+        <h3 class="title is-4 mt-5 mb-4">Key Insights</h3>
+        <div class="key-insight">
+          <p class="is-size-5 has-text-weight-semibold mb-2">Key Insight 1</p>
+          <p>A concise explanation of the first key insight that makes our approach effective.</p>
+        </div>
+        <div class="key-insight">
+          <p class="is-size-5 has-text-weight-semibold mb-2">Key Insight 2</p>
+          <p>A concise explanation of the second key insight that differentiates our method from others.</p>
+        </div>
+        <div class="key-insight">
+          <p class="is-size-5 has-text-weight-semibold mb-2">Key Insight 3</p>
+          <p>A concise explanation of the third key insight that addresses a critical challenge.</p>
+        </div>
+        
+        <!-- Method Overview Figure -->
+        <div class="has-text-centered mt-6">
+          <img src="/api/placeholder/800/400" alt="Method Overview">
+          <p class="image-caption">Figure 1: Overview of our proposed method, showing the key components and their interactions.</p>
+        </div>
+        
+        <!-- Technical Details -->
+        <h3 class="title is-4 mt-6">Technical Approach</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our method consists of three main components: [Component A], [Component B], and [Component C]. First, [Component A] processes the input data by [technical process]. Then, [Component B] performs [operation] to extract [features/patterns]. Finally, [Component C] produces the output by [process].
+          </p>
+          
+          <div class="columns is-centered mt-5">
+            <div class="column">
+              <div class="has-text-centered">
+                <img src="/api/placeholder/400/300" alt="Technical Component A">
+                <p class="image-caption">Component A: [Brief description]</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="has-text-centered">
+                <img src="/api/placeholder/400/300" alt="Technical Component B">
+                <p class="image-caption">Component B: [Brief description]</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="mt-5">
+            The key innovation in our approach is [technical innovation], which allows us to overcome [challenge] that previous methods struggled with. Our algorithm's complexity is [complexity analysis], making it efficient for [use cases].
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">Results</h2>
+        
+        <!-- Quantitative Results -->
+        <h3 class="title is-4 mt-5">Quantitative Evaluation</h3>
+        <div class="content">
+          <p>
+            We evaluate our method on [datasets] using [metrics]. Table 1 shows our performance compared to state-of-the-art methods.
+          </p>
+          
+          <div class="has-text-centered mt-4">
+            <img src="/api/placeholder/700/300" alt="Quantitative Results Table">
+            <p class="image-caption">Table 1: Comparison with state-of-the-art methods on [dataset name]. Our method outperforms others on key metrics.</p>
+          </div>
+          
+          <p class="mt-4">
+            As shown in the results, our method achieves [improvement percentage] improvement over the previous best method on [primary metric]. This confirms our theoretical analysis that [insight].
+          </p>
+        </div>
+        
+        <!-- Qualitative Results -->
+        <h3 class="title is-4 mt-6">Qualitative Results</h3>
+        <div class="content">
+          <div class="has-text-centered mt-4">
+            <img src="/api/placeholder/800/500" alt="Qualitative Results">
+            <p class="image-caption">Figure 2: Visual comparison of our method (right) against baselines (left, middle) across different test cases.</p>
+          </div>
+          
+          <p class="mt-4">
+            The visual results demonstrate that our method produces [visual quality improvements] compared to previous approaches. Particularly, we excel at [specific challenging cases] where other methods typically fail.
+          </p>
+        </div>
+        
+        <!-- Ablation Study -->
+        <h3 class="title is-4 mt-6">Ablation Study</h3>
+        <div class="content">
+          <p>
+            To understand the contribution of each component, we conduct an ablation study by removing or replacing key components.
+          </p>
+          
+          <div class="has-text-centered mt-4">
+            <img src="/api/placeholder/700/300" alt="Ablation Study Results">
+            <p class="image-caption">Figure 3: Ablation study showing the impact of each component on overall performance.</p>
+          </div>
+          
+          <p class="mt-4">
+            The ablation results confirm that [component X] contributes the most to performance gains, while the combination of all components achieves the best results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Applications -->
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">Applications</h2>
+        
+        <div class="columns is-multiline mt-5">
+          <!-- Application 1 -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/api/placeholder/400/300" alt="Application 1">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">Application Domain 1</p>
+                <div class="content">
+                  <p>Description of how our method can be applied to this domain and the benefits it provides.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Application 2 -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/api/placeholder/400/300" alt="Application 2">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">Application Domain 2</p>
+                <div class="content">
+                  <p>Description of how our method can be applied to this domain and the benefits it provides.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Application 3 -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/api/placeholder/400/300" alt="Application 3">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">Application Domain 3</p>
+                <div class="content">
+                  <p>Description of how our method can be applied to this domain and the benefits it provides.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Application 4 -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="/api/placeholder/400/300" alt="Application 4">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="title is-5">Application Domain 4</p>
+                <div class="content">
+                  <p>Description of how our method can be applied to this domain and the benefits it provides.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="bibtex">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">BibTeX</h2>
+        <div class="content">
+          <pre><code>@article{lastname2025projectname,
+  title={Your Research Project Title},
+  author={Last Name, First and Author, Second and Researcher, Third and Scholar, Fourth},
+  journal={Journal or Conference Name},
+  year={2025},
+  publisher={Publisher Name}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section has-background-light">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title is-2 has-text-centered section-title">Team</h2>
+        
+        <div class="columns is-multiline is-centered mt-5">
+          <!-- Team Member 1 -->
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-1by1">
+                  <img src="/api/placeholder/200/200" alt="Team Member 1">
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-5">First Author</p>
+                <p class="subtitle is-6">University One</p>
+                <div class="content">
+                  <a href="#" class="icon is-medium">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="ai ai-google-scholar"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Team Member 2 -->
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-1by1">
+                  <img src="/api/placeholder/200/200" alt="Team Member 2">
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-5">Second Author</p>
+                <p class="subtitle is-6">Research Lab</p>
+                <div class="content">
+                  <a href="#" class="icon is-medium">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="ai ai-google-scholar"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Team Member 3 -->
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-1by1">
+                  <img src="/api/placeholder/200/200" alt="Team Member 3">
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-5">Third Author</p>
+                <p class="subtitle is-6">University One</p>
+                <div class="content">
+                  <a href="#" class="icon is-medium">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="ai ai-google-scholar"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Team Member 4 -->
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-1by1">
+                  <img src="/api/placeholder/200/200" alt="Team Member 4">
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-5">Fourth Author</p>
+                <p class="subtitle is-6">University Two</p>
+                <div class="content">
+                  <a href="#" class="icon is-medium">
+                    <i class="fas fa-globe"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="icon is-medium">
+                    <i class="ai ai-google-scholar"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <p>
+          © 2025 Research Group. All Rights Reserved.
+        </p>
+        <p class="mt-2">
+          Website template created for academic research projects. Feel free to use and modify.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target || 'navbarMenu';
+          const $target = document.getElementById(target) || document.querySelector('.navbar-menu');
+          
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
